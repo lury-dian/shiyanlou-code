@@ -2,6 +2,12 @@
 import sys
 from collections import Counter
 
+"""
+Counter的用法
+Counter("abcaannb").most_common(2) ---对于字符串进行计算，每个字符串有多少个，最多返回两个字符串
+[('a',3),('n',2)] ---返回列表，字符与个数用元组表示，无序
+"""
+
 class Person(object):
     """
     返回具有给定名称的 Person 对象
@@ -42,7 +48,7 @@ class Student(Person):
         n1=0
         n2=0
         for i in comm:
-            if i[0] != 'D':
+            if i[0] != 'D':    #这里的每一个i都是一个元组，对他进行索引取值
                 n1 += i[1]
             else:
                 n2 += i[1]
@@ -63,15 +69,15 @@ class Teacher(Person):
     def get_grade(self):
         list1 =[]
         comm = Counter(self.grade).most_common(4)
-        for i,j in comm:
-            list1.append("{}:{}".format(i,j))
+        for i,j in comm:   #这里需要对元组里的两个元素同时进行格式化
+            list1.append("{}:{}".format(i,j))   #格式化之后放到列表中 
         print(','.join(list1))
 
 
 person1 = Person('Sachin')
-if sys.argv[1] == 'student':
-    student1 = Student('Kushal', 'CSE', 2005,sys.argv[2])
+if sys.argv[1] == 'student':   #sys.argv进行索引取值的时候python3不包含在里面
+    student1 = Student('Kushal', 'CSE', 2005, sys.argv[2])
     student1.get_grade()
 else:
-    teacher1 = Teacher('Prashad', ['C', 'C++'],sys.argv[2])
+    teacher1 = Teacher('Prashad', ['C', 'C++'], sys.argv[2])
     teacher1.get_grade()
