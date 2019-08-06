@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: lury-up
+Version: 0.2
+Summary: Factorial module.
+Home-page: https://github.com/lury-dian/shiyanlou-code
+Author: Lury
+Author-email: dianyuh@sina.com
+License: MIT
+Description: A test module for our book.
+Platform: Linux
