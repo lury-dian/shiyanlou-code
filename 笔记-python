@@ -47,5 +47,24 @@ set1.remove('a')   删除
 如果你想要创建一个复杂对象的副本（复杂对象：序列，简单对象：int等），必须使用切片操作来制作副本，如果你仅仅使用一个变量名赋予给另外一个名称，
 那么他们只会查询同一个地址，之后进行的操作都是对同一个对象进行操作，之后会造成麻烦
 
+e.g.
+s=['a','s','r','f']
+d=s
+b=s[::]
+
+print('{}\n{}\n{}\n'.format(s,d,b))
+
+s.append('eee')
+
+print('{}\n{}\n{}\n'.format(s,d,b))
+
+d.append('ooo')
+
+print('{}\n{}\n{}\n'.format(s,d,b))
+
+del b[1]
+
+print('{}\n{}\n{}\n'.format(s,d,b))
+
 
 
