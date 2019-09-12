@@ -66,5 +66,10 @@ del b[1]
 
 print('{}\n{}\n{}\n'.format(s,d,b))
 
-
+7. 对字符串进行操作，检查字符串中的一部分、去掉空格等操作
+a = "adsadads"
+a.startwith('a')
+if dsa in a:
+find.('a')
+join
 
